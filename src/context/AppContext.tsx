@@ -73,7 +73,7 @@ const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [zoomScale, setZoomScale] = useState<number>(100);
-  const [currentTab, setCurrentTab] = useState<string>('overview');
+  const [currentTab, setCurrentTab] = useState<string>('landing');
   const [products, setProducts] = useState<Product[]>(() => {
     try {
       const saved = localStorage.getItem('yatarth_products_pune_v1');

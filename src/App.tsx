@@ -18,9 +18,10 @@ import { BacktrackView } from './views/BacktrackView';
 import { YatarthCopilot } from './components/copilot/YatarthCopilot';
 import { CommandPalette } from './components/modals/CommandPalette';
 import { AuthModal } from './components/modals/AuthModal';
+import { LandingPageView } from './views/LandingPageView';
 
 const MainLayout: React.FC = () => {
-  const { currentTab, zoomScale } = useApp();
+  const { currentTab, setCurrentTab, zoomScale } = useApp();
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
@@ -40,6 +41,11 @@ const MainLayout: React.FC = () => {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
+
+  // Render full-screen SaaS Landing Page when on 'landing' tab
+  if (currentTab === 'landing') {
+    return <LandingPageView onLaunchApp={(tab?: string) => setCurrentTab(tab || 'overview')} />;
+  }
 
   const renderActiveView = () => {
     switch (currentTab) {

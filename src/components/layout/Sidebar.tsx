@@ -15,9 +15,10 @@ import {
   Sparkles,
   ChevronRight,
   ChevronLeft,
-  Building2,
-  Network,
-  X
+  Building2, 
+  Network, 
+  X,
+  Globe
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -54,6 +55,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
   ).length;
 
   const navItems = [
+    { 
+      id: 'landing', 
+      label: 'Gov Portal (Home)', 
+      icon: Globe,
+      badge: 'Public'
+    },
     { id: 'overview', label: 'Overview', icon: LayoutDashboard },
     { 
       id: 'scan_product', 

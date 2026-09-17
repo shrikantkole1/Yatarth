@@ -13,7 +13,8 @@ import {
   Menu,
   ZoomIn,
   ZoomOut,
-  Network
+  Network,
+  Globe
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -158,6 +159,16 @@ export const Navbar: React.FC<NavbarProps> = ({
         >
           <Network size={14} className={currentTab === 'backtrack' ? 'text-white' : 'text-blue-700'} />
           <span className="hidden sm:inline">Backtrack Trace</span>
+        </button>
+
+        {/* Public SaaS Portal Landing Page Button */}
+        <button
+          onClick={() => setCurrentTab('landing')}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs transition-all shadow-sm active:scale-95 border border-slate-700 cursor-pointer"
+          title="Return to Public GovTech SaaS Landing Page"
+        >
+          <Globe size={14} className="text-amber-400" />
+          <span className="hidden md:inline">Gov Portal</span>
         </button>
 
         {/* Yatarth AI Trigger */}
