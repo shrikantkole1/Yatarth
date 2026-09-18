@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+
+@layer base {
+  :root {
+    --color-bg-primary: #f8fafc;
+    --color-bg-surface: #ffffff;
+    --color-border-subtle: #e2e8f0;
+  }
+
+  html, body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    letter-spacing: -0.011em;
+  }
+}
+
+/* Ensure Plus Jakarta Sans is applied uniformly across all landing headings and text */
+.font-sans, h1, h2, h3, h4, h5, h6, p, span, button, input, label, a {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Custom sleek scrollbar for clean enterprise interfaces */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print Styles for Audit Ready Reports */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+  .print-page-break {
+    page-break-before: always;
+  }
+}

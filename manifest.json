@@ -1,0 +1,32 @@
+{
+  "name": "Yatarth AI",
+  "platform": "National Legal Metrology AI Surveillance Platform",
+  "version": "2.4.0-production",
+  "description": "AI-Powered Legal Metrology Act (LMR 2011) Packaging Compliance Audit Platform",
+  "roles": [
+    {
+      "role": "Inspector",
+      "email": "inspector@yatarth.ai",
+      "capabilities": ["Create 360 Scan", "Upload Label Views", "Run AI Compliance Scan", "Download PDF Report"]
+    },
+    {
+      "role": "Officer",
+      "email": "officer@yatarth.ai",
+      "capabilities": ["View Regional Violations", "Audit Non-Compliant Products", "Issue Compliance Notices"]
+    },
+    {
+      "role": "Admin",
+      "email": "admin@yatarth.ai",
+      "capabilities": ["System Administration", "Manage Rules & Thresholds", "Analytics Dashboard"]
+    }
+  ],
+  "rulesEnforced": [
+    "LMR-2011-R6(1)(a)",
+    "LMR-2011-R6(1)(d)",
+    "LMR-2011-R6(1)(e)",
+    "LMR-2011-R6(1)(m)",
+    "LMR-2011-R6(2)",
+    "LMR-2011-R7(1)",
+    "LMR-2011-R9(1)"
+  ]
+}
