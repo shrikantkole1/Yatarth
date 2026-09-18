@@ -843,7 +843,7 @@ export const INITIAL_PRODUCTS: Product[] = [
     sides: [
       {
         id: 'side-03-front',
-        sideName: 'Front Display Foil Panel',
+        sideName: 'Front Panel',
         imageUrl: '/images/products/namkeen_bhujia.jpg',
         boundingBoxes: [
           {

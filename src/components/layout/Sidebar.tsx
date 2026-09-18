@@ -56,9 +56,19 @@ export const Sidebar: React.FC<SidebarProps> = ({
     (i) => i.status === 'in_progress'
   ).length;
 
+interface NavItem {
+  id: string;
+  label: string;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
+  badge?: string;
+  highlight?: boolean;
+  count?: number;
+  alertCount?: number;
+}
+
   // Dynamic Navigation Items tailored per stakeholder role
-  const getNavItems = () => {
-    const publicHome = { 
+  const getNavItems = (): NavItem[] => {
+    const publicHome: NavItem = { 
       id: 'landing', 
       label: 'Gov Portal (Home)', 
       icon: Globe,

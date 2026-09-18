@@ -233,8 +233,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                   यथार्थ AI
                 </span>
               </div>
-              <p className="text-[11px] text-slate-500 font-medium leading-tight">
-                National Legal Metrology & Compliance Cloud
+              <p className="text-[11px] text-slate-600 font-semibold leading-tight">
+                Department of Consumer Affairs (DoCA) • Ministry of Consumer Affairs, Food & Public Distribution
               </p>
             </div>
           </div>
@@ -343,19 +343,19 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
       <section id="portals" className="pt-12 pb-16 px-4 sm:px-8 bg-gradient-to-b from-slate-50 to-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto space-y-8">
           
-          <div className="text-center space-y-3 max-w-3xl mx-auto">
-            <span className="px-3.5 py-1 rounded-full bg-blue-100/80 text-blue-800 text-xs font-mono font-bold uppercase tracking-wider border border-blue-200">
-              NATIONAL SURVEILLANCE & REDRESSAL CLOUD
+          <div className="text-center space-y-3.5 max-w-4xl mx-auto">
+            <span className="px-3.5 py-1.5 rounded-full bg-blue-100/90 text-blue-900 text-xs font-mono font-bold uppercase tracking-wider border border-blue-300/80 shadow-2xs">
+              DEPARTMENT OF CONSUMER AFFAIRS (DoCA) • MINISTRY OF CONSUMER AFFAIRS, FOOD & PUBLIC DISTRIBUTION
             </span>
             <h1 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
-              Statutory Packaging Intelligence & Enforcement
+              Statutory Packaging Intelligence & Enforcement Cloud
             </h1>
-            <p className="text-sm sm:text-base text-slate-600 font-medium">
-              Select your stakeholder role to access high-precision packaging audits, rule verification, or citizen rights redressal:
+            <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed max-w-3xl mx-auto">
+              Automated compliance inspection of <strong>Packaged Commodities</strong> under the <strong>Legal Metrology Act, 2009</strong> and <strong>Legal Metrology (Packaged Commodities) Rules, 2011</strong> across retail stores, supermarkets, and e-commerce platforms.
             </p>
           </div>
 
-          {/* 4 Role Cards (Pristine Light GovTech UI) */}
+          {/* 4 Role Cards (Pristine Light GovTech UI with Enhanced Readability & Bold Highlights) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-2">
             
             {/* Card 1: Inspector */}
@@ -378,8 +378,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                   </h3>
                   <p className="text-xs text-slate-500 font-semibold mt-0.5">Field Enforcement Officer</p>
                 </div>
-                <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                  On-site store inspection, GPS geofencing, sub-mm font caliper measurement, assess editable fines, and issue Form LM-IR-2026.
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  <strong>On-site retail inspection</strong>, <strong>GPS geofencing</strong>, <strong>sub-mm font caliper measurement</strong>, assess <strong>editable compounding fines</strong>, and issue statutory <strong>Form LM-IR-2026</strong> seizure notices.
                 </p>
               </div>
               <div className="pt-6">
@@ -410,8 +410,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                   </h3>
                   <p className="text-xs text-slate-500 font-semibold mt-0.5">Manufacturer & Packer</p>
                 </div>
-                <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                  Pre-audit label artwork before mass printing, verify mandatory 7 declarations, calculate Rule 6(11) Unit Sale Price & font mm.
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  <strong>Pre-audit packaging artwork</strong> prior to mass printing, verify <strong>mandatory 7 declarations</strong>, calculate <strong>Rule 6(11) Unit Sale Price</strong>, and ensure <strong>Rule 7 font height (mm)</strong> compliance.
                 </p>
               </div>
               <div className="pt-6">
@@ -442,8 +442,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                   </h3>
                   <p className="text-xs text-slate-500 font-semibold mt-0.5">Citizen Grievance Redressal</p>
                 </div>
-                <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                  Report overcharging above MRP, cooling charges, dual pricing, or smudged expiry dates. File complaints and track resolution.
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  Instant citizen protection against <strong>MRP overcharging</strong>, illegal <strong>cooling charges</strong>, <strong>dual pricing</strong>, or smudged expiry dates. <strong>File formal complaints</strong> and <strong>track real-time resolution</strong>.
                 </p>
               </div>
               <div className="pt-6">
@@ -474,8 +474,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                   </h3>
                   <p className="text-xs text-slate-500 font-semibold mt-0.5">State Legal Metrology Director</p>
                 </div>
-                <p className="text-xs text-slate-600 leading-relaxed font-normal">
-                  State-wide surveillance command. Real-time compliance heatmaps, backward supply chain trace to wholesale depots, and stop-sale orders.
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  <strong>State-wide surveillance command</strong> with <strong>real-time compliance heatmaps</strong>, <strong>reverse supply chain trace</strong> back to wholesale depots, and instant <strong>stop-sale orders</strong>.
                 </p>
               </div>
               <div className="pt-6">
@@ -515,9 +515,9 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
                   <ShieldCheck size={20} />
                 </div>
-                <h3 className="font-bold text-sm text-slate-900 leading-snug">Objective & Defensible</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Packaged commodities enforced strictly under Legal Metrology Rules 2011. Eliminates inspector subjectivity and visual bias.
+                <h3 className="font-bold text-base text-slate-900 leading-snug">Objective & Defensible</h3>
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  Packaged commodities enforced strictly under <strong>Legal Metrology Rules, 2011</strong>. Eliminates <strong>inspector subjectivity</strong> and <strong>visual bias</strong> in judicial scrutiny.
                 </p>
               </div>
               <span className="text-[11px] font-mono font-bold text-emerald-700 pt-3 border-t border-slate-100 block">
@@ -531,9 +531,9 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-700 flex items-center justify-center">
                   <Ruler size={20} />
                 </div>
-                <h3 className="font-bold text-sm text-slate-900 leading-snug">Real Measurement</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Character height in mm measured with calibrated reference geometry and optical distance compensation. No guesswork.
+                <h3 className="font-bold text-base text-slate-900 leading-snug">Real Measurement</h3>
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  Character height in mm measured with <strong>calibrated reference geometry</strong> and <strong>optical distance compensation</strong>. Sub-millimeter proof for <strong>Rule 7 Table I</strong>.
                 </p>
               </div>
               <span className="text-[11px] font-mono font-bold text-sky-700 pt-3 border-t border-slate-100 block">
@@ -547,9 +547,9 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center">
                   <Network size={20} />
                 </div>
-                <h3 className="font-bold text-sm text-slate-900 leading-snug">Complete Visibility</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Full custody trail: Retail Shelf → Wholesaler → Distributor → Manufacturing Plant → Raw Material Suppliers.
+                <h3 className="font-bold text-base text-slate-900 leading-snug">Complete Visibility</h3>
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  Full custody trail across <strong>Retail Shelf → Wholesaler → Distributor → Manufacturing Plant → Raw Material Suppliers</strong>.
                 </p>
               </div>
               <span className="text-[11px] font-mono font-bold text-blue-700 pt-3 border-t border-slate-100 block">
@@ -563,9 +563,9 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center">
                   <Store size={20} />
                 </div>
-                <h3 className="font-bold text-sm text-slate-900 leading-snug">Reverse Supply Mapping</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Detect a bad batch in one supermarket and instantly identify every other retail outlet that took delivery of the same lot.
+                <h3 className="font-bold text-base text-slate-900 leading-snug">Reverse Supply Mapping</h3>
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  Detect a non-compliant batch in one supermarket and instantly identify <strong>every other retail outlet</strong> that received the <strong>same defective lot</strong>.
                 </p>
               </div>
               <span className="text-[11px] font-mono font-bold text-purple-700 pt-3 border-t border-slate-100 block">
@@ -579,9 +579,9 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-700 flex items-center justify-center">
                   <Bell size={20} />
                 </div>
-                <h3 className="font-bold text-sm text-slate-900 leading-snug">Smart Escalation</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Auto-routes high-severity violations to Controller of Legal Metrology with pre-drafted statutory seizure summonses.
+                <h3 className="font-bold text-base text-slate-900 leading-snug">Smart Escalation</h3>
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                  Auto-routes <strong>high-severity violations</strong> to the <strong>Controller of Legal Metrology</strong> with pre-drafted <strong>statutory seizure summonses</strong>.
                 </p>
               </div>
               <span className="text-[11px] font-mono font-bold text-rose-700 pt-3 border-t border-slate-100 block">
@@ -879,8 +879,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
             <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight">
               End-to-End Enforcement Flow
             </h2>
-            <p className="text-xs sm:text-sm text-slate-600">
-              Ministry of Consumer Affairs Architecture: From single product detection on the shelf to state-wide containment.
+            <p className="text-sm text-slate-700 font-medium">
+              Department of Consumer Affairs (DoCA) Architecture: From single product detection on the shelf to state-wide containment.
             </p>
           </div>
 
@@ -947,9 +947,9 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                   {activeWorkflowStep === 6 && 'Automated Legal Seizure Notice Generation'}
                 </h3>
 
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <p className="text-sm text-slate-700 leading-relaxed font-normal">
                   {activeWorkflowStep === 4 &&
-                    'Traces wholesale dispatch manifests to pinpoint all physical supermarkets and hypermarkets that took delivery of inventory from the defective batch.'}
+                    'Traces wholesale dispatch manifests to pinpoint all physical supermarkets and hypermarkets that took delivery of inventory from the defective lot.'}
                   {activeWorkflowStep === 1 &&
                     'Field officer camera scans front and back product panels, extracting barcode, OCR text, and GPS geofence with sub-second latency.'}
                   {activeWorkflowStep === 2 &&
@@ -959,7 +959,7 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                   {activeWorkflowStep === 5 &&
                     'Establishes a digital perimeter over affected sales territory to prevent inter-state consignment movement.'}
                   {activeWorkflowStep === 6 &&
-                    'Generates Form LM-IR-2026 compounding notice with full legal citations under Sections 36 & 39 of The Legal Metrology Act 2009.'}
+                    'Generates Form LM-IR-2026 compounding notice with full legal citations under Sections 36 & 39 of The Legal Metrology Act, 2009.'}
                 </p>
 
                 <button
@@ -1039,8 +1039,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <Scan size={20} />
               </div>
               <h3 className="font-bold text-base text-slate-900">AI OCR & Declaration Validator</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Multi-angle camera scanning parses Net Qty, MRP, Mfg Date, Expiry, Consumer Helpline, and Country of Origin with sub-second validation.
+              <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                Multi-angle camera scanning parses <strong>Net Quantity</strong>, <strong>MRP</strong>, <strong>Date of Mfg/Packing</strong>, <strong>Expiry</strong>, <strong>Consumer Care details</strong>, and <strong>Country of Origin</strong> with sub-second validation.
               </p>
             </div>
 
@@ -1050,8 +1050,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <Ruler size={20} />
               </div>
               <h3 className="font-bold text-base text-slate-900">Calibrated Millimeter Typography</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Computer vision models measure the actual physical millimeter height of mandatory letters, enforcing Rule 7 Table I standards with zero calipers needed.
+              <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                Computer vision models measure the actual <strong>physical millimeter height</strong> of mandatory letters, enforcing <strong>Rule 7 Table I</strong> standards with zero calipers needed.
               </p>
             </div>
 
@@ -1061,8 +1061,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <Network size={20} />
               </div>
               <h3 className="font-bold text-base text-slate-900">Reverse Supply Chain Backtracker</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Trace defective or expired lots from the retail supermarket shelf back to wholesale depots, transport invoices, and manufacturer production lines.
+              <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                Trace defective or expired lots from the <strong>retail supermarket shelf</strong> back to <strong>wholesale depots</strong>, transport invoices, and <strong>manufacturer production lines</strong>.
               </p>
             </div>
 
@@ -1072,8 +1072,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <Radio size={20} />
               </div>
               <h3 className="font-bold text-base text-slate-900">Zonal Containment Radar</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Broadcasting emergency alerts to all field enforcement inspectors in the circle, containing hazardous or expired product spread within hours.
+              <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                Broadcasting <strong>emergency alerts</strong> to all field enforcement inspectors in the circle, containing <strong>hazardous or expired product spread</strong> within hours.
               </p>
             </div>
 
@@ -1083,8 +1083,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <FileText size={20} />
               </div>
               <h3 className="font-bold text-base text-slate-900">Tamper-Proof Evidence Dossier</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Every inspection automatically produces court-ready PDF dossiers with SHA-256 digital hashes, GPS coordinates, and inspector credentials.
+              <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                Every inspection automatically produces <strong>court-ready PDF dossiers</strong> with <strong>SHA-256 digital hashes</strong>, <strong>GPS geofence coordinates</strong>, and inspector credentials.
               </p>
             </div>
 
@@ -1094,8 +1094,8 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <Sparkles size={20} />
               </div>
               <h3 className="font-bold text-base text-slate-900">Yatarth AI Statutory Copilot</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                An intelligent legal metrology assistant answering statutory questions, citing specific penalty sections, and drafting summons notices on demand.
+              <p className="text-sm text-slate-700 leading-relaxed font-normal">
+                An intelligent legal metrology assistant answering <strong>statutory questions</strong>, citing specific <strong>penalty sections</strong>, and drafting <strong>summons notices</strong> on demand.
               </p>
             </div>
 
@@ -1329,7 +1329,7 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                   </button>
 
                   {isOpen && (
-                    <div className="px-5 pb-5 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3 animate-in fade-in duration-150 font-normal">
+                    <div className="px-5 pb-5 text-sm text-slate-700 leading-relaxed border-t border-slate-100 pt-3 animate-in fade-in duration-150 font-normal">
                       {faq.answer}
                     </div>
                   )}
@@ -1387,7 +1387,7 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
                 <span className="text-lg font-black tracking-tight text-white">Yatarth AI</span>
               </div>
               <p className="text-xs text-slate-400 leading-relaxed">
-                National Legal Metrology Label & Compliance Cloud developed for the Smart India Hackathon 2026. Empowering consumer protection across India.
+                Statutory compliance, label inspection, and packaging surveillance software for the Department of Consumer Affairs (DoCA), Ministry of Consumer Affairs, Food & Public Distribution, Government of India.
               </p>
               <p className="text-xs font-bold text-[#eab308] font-serif tracking-wide pt-1">
                 सत्यमेव जयते | Truth Alone Triumphs
@@ -1459,7 +1459,7 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
 
           {/* Sub-Footer Bar */}
           <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-            <p>© 2026 Yatarth AI • Developed for Smart India Hackathon (SIH) 2026 • Government of India.</p>
+            <p>© 2026 Yatarth AI • Department of Consumer Affairs (DoCA), Ministry of Consumer Affairs, Food & Public Distribution • Government of India.</p>
             <div className="flex items-center gap-4 text-slate-400">
               <button onClick={() => handleSelectRolePortal('inspector')} className="hover:text-white transition-colors cursor-pointer">
                 Inspector Portal

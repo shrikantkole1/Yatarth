@@ -237,7 +237,7 @@ export interface TeamMember {
   id: string;
   name: string;
   email: string;
-  role: 'Controller of Legal Metrology' | 'Senior Inspection Officer' | 'Legal Metrology Officer' | 'Field Enforcement Inspector' | 'Verification Officer';
+  role: 'Controller of Legal Metrology' | 'Senior Inspection Officer' | 'Legal Metrology Officer' | 'Field Enforcement Inspector' | 'Verification Officer' | 'Manufacturer / Packer Lead' | 'Citizen Consumer';
   status: 'active' | 'away' | 'offline';
   avatar: string;
   assignedProducts: number;

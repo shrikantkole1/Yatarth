@@ -22,7 +22,7 @@ export const BusinessPortalView: React.FC<BusinessPortalViewProps> = ({
 
   // Pre-Market Artwork Upload & Check State (Modules 2, 3, 4, 5)
   const [uploadedArtwork, setUploadedArtwork] = useState<string>('/images/products/almond_cookies.jpg');
-  const [selectedArtworkPreset, setSelectedArtworkPreset] = useState<'cookies' | 'namkeen' | 'custom'>('cookies');
+  const [selectedArtworkPreset, setSelectedArtworkPreset] = useState<'cookies' | 'namkeen' | 'honey' | 'custom'>('cookies');
   const [isAuditing, setIsAuditing] = useState<boolean>(false);
   const [auditVerdict, setAuditVerdict] = useState<'PASS' | 'FAIL' | 'PARTIAL'>('PASS');
   const [certificateGenerated, setCertificateGenerated] = useState<boolean>(false);
@@ -510,7 +510,7 @@ Overall Compliance Verdict,,PASS,"100% PRE-MARKET CLEARANCE GRANTED"`;
               {/* Minimum Font Requirement */}
               <div className="p-4 rounded-2xl bg-indigo-50 border border-indigo-200 space-y-1">
                 <span className="text-[10px] font-mono font-bold text-indigo-800 uppercase block">Statutory Minimum Font Height</span>
-                <span className="text-xl font-black text-indigo-950">{statutoryMinFont}</span>
+                <span className="text-xl font-black text-indigo-950">{statutoryMinFontMm} mm</span>
                 <p className="text-[11px] text-slate-600 font-medium pt-1">
                   Applies to all numerals and letters in net quantity, MRP, and consumer care declarations.
                 </p>

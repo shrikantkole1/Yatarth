@@ -6,14 +6,27 @@ import {
 } from 'lucide-react';
 
 interface ConsumerGrievanceFormViewProps {
-  onBack: () => void;
-  onGrievanceSubmitted: (complaintId: string) => void;
+  onBack?: () => void;
+  onBackToHome?: () => void;
+  onGrievanceSubmitted?: (complaintId: string) => void;
+  onViewTracking?: () => void;
 }
 
 export const ConsumerGrievanceFormView: React.FC<ConsumerGrievanceFormViewProps> = ({
   onBack,
-  onGrievanceSubmitted
+  onBackToHome,
+  onGrievanceSubmitted,
+  onViewTracking
 }) => {
+  const handleBack = () => {
+    if (onBack) onBack();
+    else if (onBackToHome) onBackToHome();
+  };
+
+  const handleSubmitted = (id: string) => {
+    if (onGrievanceSubmitted) onGrievanceSubmitted(id);
+    else if (onViewTracking) onViewTracking();
+  };
   // Form Field States (Mirroring the reference images)
   const [expectation, setExpectation] = useState<string>('Refund of Overcharged Amount');
   const [registeredWithCompany, setRegisteredWithCompany] = useState<string>('Yes');
@@ -98,14 +111,14 @@ export const ConsumerGrievanceFormView: React.FC<ConsumerGrievanceFormViewProps>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <button
-              onClick={() => onGrievanceSubmitted(generatedId)}
+              onClick={() => handleSubmitted(generatedId)}
               className="px-6 py-3 rounded-xl bg-blue-700 hover:bg-blue-800 text-white font-black text-xs shadow-md transition-all cursor-pointer"
             >
               Track Live 4-Stage Redressal Status
             </button>
 
             <button
-              onClick={onBack}
+              onClick={handleBack}
               className="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-all cursor-pointer"
             >
               Return to Portal Home
@@ -122,7 +135,7 @@ export const ConsumerGrievanceFormView: React.FC<ConsumerGrievanceFormViewProps>
       {/* Top Breadcrumb & Back button */}
       <div className="flex items-center justify-between mb-6">
         <button
-          onClick={onBack}
+          onClick={handleBack}
           className="flex items-center gap-2 text-xs font-bold text-blue-900 hover:text-blue-700 bg-white border border-slate-200 px-3.5 py-2 rounded-xl shadow-2xs hover:bg-slate-50 transition-all cursor-pointer"
         >
           <ArrowLeft size={14} />
@@ -575,7 +588,7 @@ export const ConsumerGrievanceFormView: React.FC<ConsumerGrievanceFormViewProps>
           <div className="pt-4 border-t border-slate-200 flex items-center justify-between">
             <button
               type="button"
-              onClick={onBack}
+              onClick={handleBack}
               className="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs cursor-pointer transition-colors"
             >
               Cancel
