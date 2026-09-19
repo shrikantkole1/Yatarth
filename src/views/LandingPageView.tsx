@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { ConsumerGrievanceFormView } from './ConsumerGrievanceFormView';
 import { BusinessPortalView } from './BusinessPortalView';
+import ashokaEmblem from '../assets/ashoka_emblem.png';
 import {
   Scale, Shield, ShieldCheck, ShieldAlert, FileText, Search, Upload, Scan, Camera,
   PhoneCall, MessageSquare, Bot, Sparkles, Globe, RefreshCw,
@@ -217,58 +218,60 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans antialiased selection:bg-blue-100 selection:text-blue-900">
       
-      {/* ── 1. Top Modern Header (Matches Screenshot Reference) ── */}
-      <header className="bg-white border-b border-slate-200/90 sticky top-0 z-30 shadow-2xs backdrop-blur-md">
+      {/* ── 1. Top Modern Header (Official GovTech Deep Blue) ── */}
+      <header className="bg-[#183883] text-white border-b border-blue-900 sticky top-0 z-30 shadow-md backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 h-18 flex items-center justify-between gap-4">
           
-          {/* Brand Logo & Tagline */}
+          {/* Brand Logo & Department Title */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-700 to-indigo-600 flex items-center justify-center text-white shadow-sm flex-shrink-0">
+            <div className="w-10 h-10 rounded-full bg-blue-700/70 border border-blue-400/40 flex items-center justify-center text-white shadow-inner flex-shrink-0">
               <Scale size={20} className="stroke-[2.5]" />
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <span className="text-xl font-black text-slate-950 tracking-tight">Yatarth AI</span>
-                <span className="px-2 py-0.5 rounded-md bg-amber-100/80 text-amber-900 border border-amber-300/80 text-[11px] font-mono font-bold">
+              <div className="text-[11px] text-blue-200 font-semibold tracking-wide flex items-center gap-1.5 leading-tight">
+                <span>उपभोक्ता मामले विभाग</span>
+                <span className="text-blue-300">•</span>
+                <span>DEPT. OF CONSUMER AFFAIRS</span>
+              </div>
+              <div className="flex items-center gap-2 mt-0.5">
+                <span className="text-lg sm:text-xl font-black text-white tracking-tight">Yatharth AI</span>
+                <span className="text-xs sm:text-sm font-semibold text-blue-200">Legal Metrology</span>
+                <span className="hidden sm:inline-block px-2 py-0.2 rounded-md bg-amber-400/20 text-amber-300 border border-amber-400/30 text-[10px] font-mono font-bold">
                   यथार्थ AI
                 </span>
               </div>
-              <p className="text-[11px] text-slate-600 font-semibold leading-tight">
-                Department of Consumer Affairs (DoCA) • Ministry of Consumer Affairs, Food & Public Distribution
-              </p>
             </div>
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 text-xs font-bold text-slate-600">
-            <a href="#capabilities" className="hover:text-blue-700 transition-colors">Core Capabilities</a>
-            <a href="#workflow" className="hover:text-blue-700 transition-colors">6-Step Flow</a>
-            <a href="#pillars" className="hover:text-blue-700 transition-colors">5 Pillars</a>
-            <a href="#scanner-demo" className="hover:text-blue-700 transition-colors">Live Scanner Demo</a>
-            <a href="#impact" className="hover:text-blue-700 transition-colors">National Impact</a>
-            <a href="#portals" className="hover:text-blue-700 transition-colors">4 Portals</a>
+          <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold text-blue-100">
+            <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
+            <a href="#portals" className="hover:text-white transition-colors">4 Portals</a>
+            <a href="#pillars" className="hover:text-white transition-colors">5 Pillars</a>
+            <a href="#scanner-demo" className="hover:text-white transition-colors">Live Demo</a>
+            <a href="#impact" className="hover:text-white transition-colors">National Impact</a>
           </nav>
 
-          {/* Right Action CTAs: Officer Login (with 4-role switcher) & Launch Workspace */}
+          {/* Right Action CTAs: Officer Login & Access Console */}
           <div className="flex items-center gap-2.5 relative">
             
             {/* Officer Login / Role Selector Trigger */}
             <div className="relative">
               <button
                 onClick={() => setRoleDropdownOpen(!roleDropdownOpen)}
-                className="px-3.5 py-2 rounded-xl border border-slate-300 hover:border-slate-400 bg-white hover:bg-slate-50 text-slate-800 text-xs font-bold flex items-center gap-1.5 transition-all shadow-2xs cursor-pointer"
+                className="px-3 py-2 rounded-xl border border-blue-400/40 hover:border-blue-300 bg-blue-800/60 hover:bg-blue-800 text-white text-xs font-bold flex items-center gap-1.5 transition-all shadow-xs cursor-pointer"
                 title="Select Stakeholder Portal"
               >
-                <Lock size={13} className="text-slate-600" />
-                <span>Officer Login</span>
-                <ChevronDown size={13} className="text-slate-400" />
+                <Lock size={13} className="text-blue-200" />
+                <span className="hidden sm:inline">Officer Login</span>
+                <ChevronDown size={13} className="text-blue-300" />
               </button>
 
               {/* 4-Role Dropdown Popover */}
               {roleDropdownOpen && (
-                <div className="absolute right-0 mt-2 w-64 rounded-2xl bg-white border border-slate-200 shadow-xl p-2 z-50 animate-in fade-in slide-in-from-top-2">
+                <div className="absolute right-0 mt-2 w-64 rounded-2xl bg-white border border-slate-200 shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2 text-slate-900">
                   <div className="px-3 py-1.5 border-b border-slate-100 text-[10px] font-mono font-bold uppercase text-slate-400 tracking-wider">
-                    Select Your Role:
+                    Select Stakeholder Role:
                   </div>
                   
                   <button
@@ -326,12 +329,12 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
               )}
             </div>
 
-            {/* Launch Inspector Workspace Primary Button */}
+            {/* Access Console / Launch Workspace Primary Pill Button */}
             <button
               onClick={() => handleSelectRolePortal('inspector')}
-              className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-black flex items-center gap-1.5 transition-all shadow-sm active:scale-95 cursor-pointer"
+              className="px-5 py-2 rounded-full bg-white hover:bg-blue-50 text-[#183883] text-xs font-black flex items-center gap-1.5 transition-all shadow-md active:scale-95 cursor-pointer"
             >
-              <span>Launch Inspector Workspace</span>
+              <span>Access Console</span>
               <ArrowRight size={14} />
             </button>
           </div>
@@ -339,19 +342,129 @@ export const LandingPageView: React.FC<LandingPageViewProps> = ({ onLaunchApp })
         </div>
       </header>
 
-      {/* ── 2. Hero Section: Stakeholder Role Options (4 Portals Kept Intact) ── */}
-      <section id="portals" className="pt-12 pb-16 px-4 sm:px-8 bg-gradient-to-b from-slate-50 to-white border-b border-slate-200/80">
+      {/* ── 2. Hero Section: Official Reference Layout with 3D Ashoka Lion Capital ── */}
+      <section className="pt-10 pb-16 px-4 sm:px-8 bg-gradient-to-b from-slate-50 via-white to-slate-50/60 border-b border-slate-200/80 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            {/* Left Content Column */}
+            <div className="lg:col-span-7 space-y-5 text-left">
+              
+              {/* Ministry & Govt of India Bar */}
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-800">
+                  <span className="w-6 h-0.75 bg-amber-500 rounded-full inline-block"></span>
+                  <span className="font-semibold text-slate-900">भारत सरकार</span>
+                  <span className="text-slate-400">•</span>
+                  <span className="font-extrabold text-slate-900 tracking-wider">GOVERNMENT OF INDIA</span>
+                </div>
+                <p className="text-[11px] sm:text-xs text-slate-500 font-bold tracking-wider uppercase pl-8">
+                  MINISTRY OF CONSUMER AFFAIRS, FOOD & PUBLIC DISTRIBUTION
+                </p>
+              </div>
+
+              {/* SIH Hackathon Problem Badge */}
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-100/90 border border-slate-200/90 text-[11px] font-mono font-bold text-slate-700 shadow-2xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>SIH 2026 Problem ID SIH26034</span>
+              </div>
+
+              {/* Hero Title */}
+              <h1 className="text-3xl sm:text-5xl lg:text-[52px] font-black text-slate-950 tracking-tight leading-[1.12]">
+                Statutory Packaging Intelligence & Enforcement Cloud
+              </h1>
+
+              {/* Blue Colored Line with Yatharth AI Legal Terminology */}
+              <div className="rounded-xl bg-blue-50/90 border border-blue-200/90 p-3 sm:p-3.5 shadow-2xs">
+                <div className="flex items-center gap-2.5 text-blue-900 text-xs sm:text-sm">
+                  <span className="flex h-2.5 w-2.5 relative shrink-0">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600"></span>
+                  </span>
+                  <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 font-semibold">
+                    <span className="font-extrabold text-blue-950">Legal Metrology Act, 2009</span>
+                    <span className="text-blue-300">|</span>
+                    <span className="text-blue-800">PCR 2011 Rules 6, 7 & 18</span>
+                    <span className="text-blue-300">|</span>
+                    <span className="text-blue-800">Sub-mm Font Caliper</span>
+                    <span className="text-blue-300">|</span>
+                    <span className="text-blue-800">Sec 36 Penalty Compounding</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Description Paragraph */}
+              <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed max-w-xl">
+                Yatharth AI scans packaged commodity labels and checks them against the <strong>Legal Metrology (Packaged Commodities) Rules, 2011</strong> deterministically with sub-millimeter precision. Every statutory declaration verified in seconds across retail stores and e-commerce platforms.
+              </p>
+
+              {/* Replaced Action Buttons for Yatharth AI */}
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <button
+                  onClick={() => handleSelectRolePortal('inspector')}
+                  className="px-6 py-3.5 rounded-xl bg-slate-950 hover:bg-slate-900 text-white text-xs sm:text-sm font-black flex items-center gap-2 transition-all shadow-md hover:shadow-lg active:scale-95 cursor-pointer"
+                >
+                  <Scan size={16} />
+                  <span>Start Inspection Scan</span>
+                </button>
+
+                <button
+                  onClick={() => setActivePortalView('business_portal')}
+                  className="px-5 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 text-xs sm:text-sm font-bold flex items-center gap-2 transition-all shadow-2xs hover:shadow-sm active:scale-95 cursor-pointer"
+                >
+                  <Building2 size={16} className="text-slate-600" />
+                  <span>Pre-Audit Packaging</span>
+                </button>
+
+                <button
+                  onClick={() => setActivePortalView('grievance_form')}
+                  className="px-4 py-3.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-800 border border-blue-200/80 text-xs sm:text-sm font-bold flex items-center gap-1.5 transition-all active:scale-95 cursor-pointer"
+                >
+                  <FileText size={15} className="text-blue-600" />
+                  <span>Citizen Grievance</span>
+                </button>
+              </div>
+
+            </div>
+
+            {/* Right Column: 3D Ashoka Lion Capital (Emblem of India) */}
+            <div className="lg:col-span-5 flex items-center justify-center relative">
+              {/* Soft atmospheric ambient glow */}
+              <div className="absolute inset-0 bg-radial from-blue-100/60 via-slate-100/30 to-transparent blur-3xl rounded-full scale-95 pointer-events-none" />
+              
+              <div className="relative z-10 p-2 flex flex-col items-center">
+                <img
+                  src={ashokaEmblem}
+                  alt="State Emblem of India - Satyamev Jayate"
+                  className="w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[430px] h-auto object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02] select-none"
+                />
+                <div className="mt-2 text-center">
+                  <span className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-widest">
+                    सत्यमेव जयते • TRUTH ALONE TRIUMPHS
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── 3. Four Stakeholder Role Portals ── */}
+      <section id="portals" className="py-14 px-4 sm:px-8 bg-white border-b border-slate-200/80">
         <div className="max-w-7xl mx-auto space-y-8">
           
-          <div className="text-center space-y-3.5 max-w-4xl mx-auto">
-            <span className="px-3.5 py-1.5 rounded-full bg-blue-100/90 text-blue-900 text-xs font-mono font-bold uppercase tracking-wider border border-blue-300/80 shadow-2xs">
-              DEPARTMENT OF CONSUMER AFFAIRS (DoCA) • MINISTRY OF CONSUMER AFFAIRS, FOOD & PUBLIC DISTRIBUTION
+          <div className="text-center space-y-2 max-w-3xl mx-auto">
+            <span className="px-3.5 py-1 rounded-full bg-blue-100/90 text-blue-900 text-xs font-mono font-bold uppercase tracking-wider border border-blue-300/80 shadow-2xs">
+              FOUR DEDICATED STAKEHOLDER PORTALS
             </span>
-            <h1 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
-              Statutory Packaging Intelligence & Enforcement Cloud
-            </h1>
-            <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed max-w-3xl mx-auto">
-              Automated compliance inspection of <strong>Packaged Commodities</strong> under the <strong>Legal Metrology Act, 2009</strong> and <strong>Legal Metrology (Packaged Commodities) Rules, 2011</strong> across retail stores, supermarkets, and e-commerce platforms.
+            <h2 className="text-2xl sm:text-4xl font-black text-slate-950 tracking-tight">
+              Select Your Operational Workspace
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 font-medium">
+              Zero-friction role access configured specifically for enforcement officers, FMCG packers, consumers, and state directors.
             </p>
           </div>
 

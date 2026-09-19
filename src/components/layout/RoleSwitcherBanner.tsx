@@ -60,7 +60,7 @@ export const RoleSwitcherBanner: React.FC = () => {
   const currentRoleMeta = roles.find((r) => r.id === currentRole) || roles[3];
 
   return (
-    <div className="bg-slate-950 text-white border-b border-slate-800 shadow-md py-2 px-4 z-40 transition-all select-none sticky top-0">
+    <div className={`bg-slate-950 text-white border-b border-slate-800 shadow-md py-2 px-4 z-40 transition-all select-none ${currentTab === 'landing' ? 'relative' : 'sticky top-0'}`}>
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-2">
         {roles.map((r) => {
           const Icon = r.icon;
